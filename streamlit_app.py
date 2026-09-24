@@ -7,7 +7,7 @@ embedding_dim = 300
 #==========================================================================
 # ajouté par Emilie avec l'aide de IA pour récupérer vocab_size, word2idx et idx2word  dans le fichier .py de streamlit
 import pickle
-with open("cours_streamlit/tokenizer.pkl", "rb") as f:
+with open("tokenizer.pkl", "rb") as f:
     tokenizer = pickle.load(f)
 
 word2idx = tokenizer.word_index
@@ -27,7 +27,7 @@ vocab_size = tokenizer.num_words
 
 import tensorflow as tf
 
-model = tf.keras.models.load_model("cours_streamlit/word2vec.h5", compile=False)
+model = tf.keras.models.load_model("word2vec.h5", compile=False)
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 # La similitude est une métrique mesurant la distance entre deux mots. Cette distance représente la façon dont les mots sont liés entre eux.
